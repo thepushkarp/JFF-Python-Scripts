@@ -1,10 +1,12 @@
-# phoneAndEmail.py - Finds Indian phone numbers and email addresses
-# form the clipboard and saves them to a file.
+"""
+phoneAndEmail.py - Finds Indian phone numbers and email addresses
+from the clipboard and saves them to a file.
 
-# Usage: Copy the text from where phone numbers and emails are to be
-# extracted, to the clipboard and run "python3 phoneAndEmail.py".
-# The phone numbers and emails from the text would be saved in
-# phoneNumbers.txt and emails.txt files respectively.
+Usage: Copy the text from where phone numbers and emails are to be
+extracted, to the clipboard and run "python3 phoneAndEmail.py".
+The phone numbers and emails from the text would be saved in
+phoneNumbers.txt and emails.txt files respectively.
+"""
 
 import re
 import pyperclip
@@ -12,8 +14,9 @@ import pyperclip
 # Mobile phone number regex
 # Pata nahi log ek universal mobile number format kyu nahi follow
 # karte ¯\_(ツ)_/¯ The number could be in the form of AAA-BBB-CCCC,
-#  AAAAA-BBBBB, AAAA-BBBBBB or AA-BBB-CCCCC, AAAAAAAAAA or maybe
-# something else (╯°□°）╯︵ ┻━┻. This regex follows the style given on
+# AAAAA-BBBBB, AAAA-BBBBBB or AA-BBB-CCCCC, AAAAAAAAAA or maybe
+# something else (╯°□°）╯︵ ┻━┻. However, this regex checks for the
+# form of AAAA-BBBBBB and AAAAAAAAAA, as given on
 # https://en.wikipedia.org/wiki/Telephone_numbers_in_India#mobile_numbers
 mobileRegex = re.compile(r'''(
 	(?:				# prefixes

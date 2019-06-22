@@ -4,14 +4,14 @@
 
 ### Inspiration 💡
 
-Some of the programs in this repository are inspired from the projects given in [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/) by Al Sweigart and some other are born out of redundant curiosity of a boring mind during lazy afternoons.
+Some of the programs in this repository are inspired from the projects given in [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/) by [Al Sweigart](https://github.com/asweigart) and some other are born out of redundant curiosity of a boring mind during lazy afternoons.
 
 This repository would contain python scripts, some of which might come of use occasionally. The purpose of creating this is to explore the various modules and implementations of the language through creating programs that are as much fun to use as they are to make.
 
 ## How to Use? 😀
 
 - Clone the repository `$ git clone https://github.com/thepushkarp/JFF-Python-Scripts.git`
-- Create a virtual environment ([click here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) to learn abou Virtual Environment)
+- Create a virtual environment ([click here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) to learn about Virtual Environment)
 
 ```sh
 python3 -m venv env
@@ -47,7 +47,7 @@ pip install -r requirements.txt
 
 ### Code Destroyer
 
-This program, inspired by [benbjohnson](https://github.com/benbjohnson)'s [tweet](https://twitter.com/benbjohnson/status/533848879423578112?lang=en) replaces semicolon ";" (U+003B) in files with a Greek Question Mark ";" (U+037E), that looks alike, but shows syntax errors (since it is a different character) leaving the programmer scratching their heads in confusion. ;-)
+Code Destroyer, inspired by a [tweet](https://twitter.com/benbjohnson/status/533848879423578112?lang=en) by Ben Johnson, replaces semicolon ";" (U+003B) in files with a Greek Question Mark ";" (U+037E), that looks alike, but shows syntax errors (since it is a different character) leaving the programmer scratching their heads in confusion. ;-)
 
 #### Usage:
 
@@ -63,7 +63,7 @@ Enter the full filename (like helloWorld.c) in the prompt that follows.
 
 ### Phone Number and Email Extractor
 
-This program takes in the text from your clipboard and saves the Phone Numbers and Email Addresses found in it to .txt files. It searches for Indian Mobile Phone Numbers, Toll-Free Numbers, Telephone Numbers and Emails using Regular Expressions.
+Phone Number and Email Extractor takes in the text from your clipboard and saves the Phone Numbers and Email Addresses found in it to .txt files. It searches for Indian Mobile Phone Numbers, Toll-Free Numbers, Telephone Numbers and Emails using Regular Expressions.
 
 #### Usage:
 

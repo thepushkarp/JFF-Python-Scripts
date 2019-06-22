@@ -1,11 +1,13 @@
-# codeDestroyer.py - Replaces semicolon(;) in files with Greek
-# Question Mark(;) that looks alike but shows syntax errors,
-# (since it is a different character) leaving the programmer
-# scratching their heads in confusion. ;-)
+""" 
+codeDestroyer.py - Replaces semicolon(;) in files with Greek
+Question Mark(;) that looks alike but shows syntax errors,
+(since it is a different character) leaving the programmer
+scratching their heads in confusion. ;-)
 
-# Usage: Put the file in the same folder as this script and run
-# "python3 codeDestroyer.py". Enter the full filename
-# (like helloWorld.c) in the prompt that follows.
+Usage: Put the file in the same folder as this script and run
+"python3 codeDestroyer.py". Enter the full filename
+(like helloWorld.c) in the prompt that follows. 
+"""
 
 import sys
 import os
