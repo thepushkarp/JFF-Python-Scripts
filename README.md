@@ -41,7 +41,8 @@ pip install -r requirements.txt
 
 - Contents
 	- [Code Destroyer](#Code-Destroyer)
-	- [Phone Number and Email Extractor](#Phone_Number-and-Email-Extractor)
+	- [Phone Number and Email Extractor](#Phone-Number-and-Email-Extractor)
+	- [Search files based on Size](#Search-files-based-on-Size)
 
 - [License](LICENSE)
 
@@ -72,6 +73,18 @@ python3 phoneAndEmail.py
 ```
 
 Two files, `emails.txt` and `phoneNumbers.txt` would be created in the same directory containing the emails and phone numbers from the copied text.
+
+### Search files based on Size
+
+Lets you search through a folder based on file size. Asks user for folder path and size. Files and subfolders inside the folder, greater than or equal to the input size would be displayed.
+
+#### Usage:
+
+```py3
+python3 searchSize.py
+```
+
+When prompted, enter the minimum size (in bytes) and the folder where files are to be searched. If the path entered is correct, the files, above and equal the size entered would be displayed.
 
 ---
 
