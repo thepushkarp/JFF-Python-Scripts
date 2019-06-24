@@ -13,14 +13,15 @@ import sys
 import os
 import re
 
-# Unicode symbos for semicolon and the Greek Question mark
+# Unicode symbols for semicolon and the Greek Question mark
 semicolon = u'\u003b'
 greekQmark = u'\u037e'
 
 # Name of file
 fileName = input("Enter the file name (like helloWorld.c):\n")
-if not os.path.exists(fileName):
-	print("\nThe filename you entered is not present. Please enter a valid filename.")
+filename = os.path.abspath(fileName)
+if (not os.path.exists(fileName)) or os.path.islink(fileName):
+	print("\nThe filename you entered is not valid. Please enter a valid filename.")
 	sys.exit()
 else:
 	# Open the file to be destroyed
