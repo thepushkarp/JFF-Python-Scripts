@@ -4,7 +4,7 @@
 
 ### Inspiration 💡
 
-Some of the programs in this repository are inspired from the projects given in [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/) by [Al Sweigart](https://github.com/asweigart) and some other are born out of redundant curiosity of a boring mind during lazy afternoons.
+Many of the programs in this repository are inspired from the projects given in [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/) by [Al Sweigart](https://github.com/asweigart) and some other are born out of redundant curiosity of a boring mind during lazy afternoons.
 
 This repository would contain python scripts, some of which might come of use occasionally. The purpose of creating this is to explore the various modules and implementations of the language through creating programs that are as much fun to use as they are to make.
 
@@ -42,7 +42,8 @@ pip install -r requirements.txt
 - Contents
 	- [Code Destroyer](#Code-Destroyer)
 	- [Phone Number and Email Extractor](#Phone-Number-and-Email-Extractor)
-	- [Search files based on Size](#Search-files-based-on-Size)
+	- [Search files based on size](#Search-files-based-on-size)
+	- [Fill gaps in naming](#Fill-gaps-in-naming)
 
 - [License](LICENSE)
 
@@ -74,7 +75,7 @@ python3 phoneAndEmail.py
 
 Two files, `emails.txt` and `phoneNumbers.txt` would be created in the same directory containing the emails and phone numbers from the copied text.
 
-### Search files based on Size
+### Search files based on size
 
 Lets you search through a folder based on file size. Asks user for folder path and size. Files and subfolders inside the folder, greater than or equal to the input size would be displayed.
 
@@ -85,6 +86,19 @@ python3 searchSize.py
 ```
 
 When prompted, enter the minimum size (in bytes) and the folder where files are to be searched. If the path entered is correct, the files, above and equal the size entered would be displayed.
+
+### Fill gaps in naming
+
+Finds all files with a given prefix, such as spam001.txt, spam002.txt, and so on, in a single folder and locates any gaps in the numbering (such as if there is a spam001.txt and spam003.txt but no spam002.txt) and reanames all the files to close this gap.
+
+#### Usage:
+
+```py3
+python3 fillGap.py
+```
+
+Enter the file prefix, extesion name and taret folder in the prompt that appears. The files would be named in
+order, closing gaps, if any.
 
 ---
 
