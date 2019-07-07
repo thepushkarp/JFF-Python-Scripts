@@ -14,7 +14,7 @@ This repository would contain python scripts, some of which might come of use oc
 - Create a virtual environment ([click here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) to learn about Virtual Environment)
 
 ```sh
-python3 -m venv env
+virtualenv env
 ```
 
 - Activate virtual environment (On macOS and Linux)
