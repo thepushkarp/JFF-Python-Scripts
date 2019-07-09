@@ -39,13 +39,13 @@ pip install -r requirements.txt
 
 ## Contents 📄
 
-- Contents
-	- [Code Destroyer](#Code-Destroyer)
-	- [Phone Number and Email Extractor](#Phone-Number-and-Email-Extractor)
-	- [Search files based on size](#Search-files-based-on-size)
-	- [Fill gaps in naming](#Fill-gaps-in-naming)
-
-- [License](LICENSE)
+- [Code Destroyer](#Code-Destroyer)
+- [Extract Phone Number and Email](#Extract-Phone-Number-and-Email)
+- [Search files based on size](#Search-files-based-on-size)
+- [Fill gaps in naming](#Fill-gaps-in-naming)
+- [Combine PDF files](#Combine-PDF-files)
+- [Add Watermark to PDF](#Add-Watermark-to-PDF)
+- [Encrypt or Decrypt a PDF](#Encrypt-or-Decrypt-a-PDF)
 
 ### Code Destroyer
 
@@ -63,9 +63,9 @@ Enter the full filename (like helloWorld.c) in the prompt that follows.
 
  __Disclaimer: Do not use this to prank on someone's hard-work. You know how frustating that feels.__
 
-### Phone Number and Email Extractor
+### Extract Phone Number and Email
 
-Phone Number and Email Extractor takes in the text from your clipboard and saves the Phone Numbers and Email Addresses found in it to .txt files. It searches for Indian Mobile Phone Numbers, Toll-Free Numbers, Telephone Numbers and Emails using Regular Expressions.
+Takes in the text from your clipboard and saves the Phone Numbers and Email Addresses found in it to .txt files. It searches for Indian Mobile Phone Numbers, Toll-Free Numbers, Telephone Numbers and Emails using Regular Expressions.
 
 #### Usage:
 
@@ -99,6 +99,56 @@ python3 fillGap.py
 
 Enter the file prefix, extesion name and taret folder in the prompt that appears. The files would be named in
 order, closing gaps, if any.
+
+### Combine PDF files
+
+Combines all the PDFs in the current working directory into
+a single PDF. The program also prompts user if they want to include the cover page of all the PDFs that are being merged.
+
+It is recommended to rename files so that they are lexographically in the same order as they are to be combined and put them in the same directory as the script.
+The combined PDF would be saved as the name of the first file in the lexographic order prepended with 'combined'. 
+
+__Ensure that none of the PDFs are encrypted.__
+
+#### Usage:
+
+```py3
+python3 combinePDF.py
+```
+
+Choose whether you want to include the cover page of each individual PDF by entering `y` or `n`.
+
+### Add Watermark to PDF
+
+Add watermark to every page of a PDF document.
+
+The watermark file should be a PDF too. If you want to make an image or text as a watermark, put them in a word file and stylize as per you want it to appear as the watermark and then export the file as PDF. This file would be the watermark file.
+
+__Ensure that none of the PDFs are encrypted.__
+
+#### Usage:
+
+```py3
+python3 addWatermarkPDF.py
+```
+
+Enter the filenames of the PDF to be watermarked and then of the watermark PDF.
+
+### Encrypt or Decrypt a PDF
+
+Encrypt an unencrypted PDF file with a password or decrypt a password-protected PDF and save as an unencrypted file.
+
+#### Usage:
+
+```py3
+python3 encryptDecryptPDF.py
+```
+
+Choose whether you want to encrypt or decrypt a PDF and then enter the name of the file. You would be prompted to enter the password either to encrypt the PDF or decrypt it, as selected earlier.
+
+## License
+
+[MIT License](LICENSE)
 
 ---
 

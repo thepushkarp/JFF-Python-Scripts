@@ -1,1 +1,2 @@
 pyperclip==1.7.0
+PyPDF3==1.0.1
