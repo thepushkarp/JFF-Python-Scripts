@@ -46,6 +46,7 @@ pip install -r requirements.txt
 - [Combine PDF files](#Combine-PDF-files)
 - [Add Watermark to PDF](#Add-Watermark-to-PDF)
 - [Encrypt or Decrypt a PDF](#Encrypt-or-Decrypt-a-PDF)
+- [Add Logo to Images](#Add-Logo-to-Images)
 
 ### Code Destroyer
 
@@ -67,6 +68,8 @@ Enter the full filename (like helloWorld.c) in the prompt that follows.
 
 Takes in the text from your clipboard and saves the Phone Numbers and Email Addresses found in it to .txt files. It searches for Indian Mobile Phone Numbers, Toll-Free Numbers, Telephone Numbers and Emails using Regular Expressions.
 
+_Useful if you have a large text data (like a website) and you are searching for phone numbers of emails in that text._
+
 #### Usage:
 
 ```py3
@@ -79,6 +82,8 @@ Two files, `emails.txt` and `phoneNumbers.txt` would be created in the same dire
 
 Lets you search through a folder based on file size. Asks user for folder path and size. Files and subfolders inside the folder, greater than or equal to the input size would be displayed.
 
+_Useful if you want to find large files and folders taking up space and wish to delete them._
+
 #### Usage:
 
 ```py3
@@ -90,6 +95,8 @@ When prompted, enter the minimum size (in bytes) and the folder where files are 
 ### Fill gaps in naming
 
 Finds all files with a given prefix, such as spam001.txt, spam002.txt, and so on, in a single folder and locates any gaps in the numbering (such as if there is a spam001.txt and spam003.txt but no spam002.txt) and reanames all the files to close this gap.
+
+_Useful if you have a number of files with same prefix and numbering after it and by some case, there is irregularity in numbering (like after deleting unnecessary images from a camera) and you wish to get a ragular naming in those files._
 
 #### Usage:
 
@@ -108,6 +115,8 @@ a single PDF. The program also prompts user if they want to include the cover pa
 It is recommended to rename files so that they are lexographically in the same order as they are to be combined and put them in the same directory as the script.
 The combined PDF would be saved as the name of the first file in the lexographic order prepended with 'combined'. 
 
+_Useful if you have many PDF and you want to read them all one after the another (like PDFs of a professor's slides that you wish to read before exams). You won't need to go from one PDF to another._
+
 __Ensure that none of the PDFs are encrypted.__
 
 #### Usage:
@@ -124,6 +133,8 @@ Add watermark to every page of a PDF document.
 
 The watermark file should be a PDF too. If you want to make an image or text as a watermark, put them in a word file and stylize as per you want it to appear as the watermark and then export the file as PDF. This file would be the watermark file.
 
+_The usefullness of this script is straightforward - To add watermark to PDF files to prove its originality, make it harder to copy, and add authorship._
+
 __Ensure that none of the PDFs are encrypted.__
 
 #### Usage:
@@ -138,6 +149,8 @@ Enter the filenames of the PDF to be watermarked and then of the watermark PDF.
 
 Encrypt an unencrypted PDF file with a password or decrypt a password-protected PDF and save as an unencrypted file.
 
+_The usefullness of this script too is pretty straightforward - To add or remove privacy to PDF files._
+
 #### Usage:
 
 ```py3
@@ -145,6 +158,20 @@ python3 encryptDecryptPDF.py
 ```
 
 Choose whether you want to encrypt or decrypt a PDF and then enter the name of the file. You would be prompted to enter the password either to encrypt the PDF or decrypt it, as selected earlier.
+
+### Add Logo to Images
+
+Adds logo to the lower-right corner of all the pngs, jpgs and jpegs in the directory.
+
+_Useful to add logos to imagesto prove their originality, make them harder to copy, and add authorship._
+#### Usage:
+
+```py3
+python3 addLogo.py
+```
+
+Enter the location of the logo file in the prompt that follows. All the images with added logo would be saved in the 'withLogo' directory.
+
 
 ## License
 
