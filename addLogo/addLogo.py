@@ -1,6 +1,8 @@
 """
-addLogo.py - Adds logo to the lower-right corner of all the png, jpg, jpeg
-files in the directory.
+addLogo.py - Adds logo to the lower-right corner of all the pngs, jpgs and
+jpegs in the directory. The size of logo is approximately 1/10 th of the size
+of the image and has a padding of 1/25 th to the right and bottom of the logo
+is added.
 
 Usage: run "python3 addLogo.py" and enter the name of the logo to be inserted.
 All the images with added logo would be saved in 'withLogo' directory.
@@ -37,8 +39,8 @@ for fileName in os.listdir('.'):
 	im = Image.open(fileName)
 	width, height = im.size
 
-	# Resizes the largest dimention of logo to 1/5 of smallest dimension
-	# of the image file
+	# Resizes the largest dimention of logo to 1/10th of smallest dimension
+	# of the image file and padding to 1/25th.
 	if height < width:
 		if logoWidth > logoHeight:
 			logoHeight = int((logoHeight / logoWidth) * int(height/10))

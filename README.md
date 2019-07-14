@@ -32,10 +32,12 @@ source env/bin/activate
 - Install requirements
 
 ```sh
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 - Run and explore the scripts!
+
+__NOTE: All the scripts are written in Python 3. So, make sure to use the appropriate version of pip and python.__
 
 ## Contents 📄
 
@@ -115,7 +117,7 @@ a single PDF. The program also prompts user if they want to include the cover pa
 It is recommended to rename files so that they are lexographically in the same order as they are to be combined and put them in the same directory as the script.
 The combined PDF would be saved as the name of the first file in the lexographic order prepended with 'combined'. 
 
-_Useful if you have many PDF and you want to read them all one after the another (like PDFs of a professor's slides that you wish to read before exams). You won't need to go from one PDF to another._
+_Useful if you have many PDF and you want to read them all one after the another (like all the PDFs of a professor's slides that you wish to read before exams). You won't need to go from one PDF to another after using this and would also have the option of adding or removing the coverpage of each PDF._
 
 __Ensure that none of the PDFs are encrypted.__
 
@@ -161,9 +163,10 @@ Choose whether you want to encrypt or decrypt a PDF and then enter the name of t
 
 ### Add Logo to Images
 
-Adds logo to the lower-right corner of all the pngs, jpgs and jpegs in the directory.
+Adds logo to the lower-right corner of all the pngs, jpgs and jpegs in the directory. The size of logo is approximately 1/10 th of the size of the image and has a padding of 1/25 th to the right and bottom of the logo is added.
 
-_Useful to add logos to imagesto prove their originality, make them harder to copy, and add authorship._
+_Useful to add logos to images to prove their originality, make them harder to copy, and add authorship._
+
 #### Usage:
 
 ```py3
