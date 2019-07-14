@@ -20,7 +20,7 @@ def encrypt():
 
 	# Check if entered filename is valid
 	if not path.exists(pdfName) or pdfName[-4:].lower() != '.pdf':
-		print('The filename ' + pdfName + ' is not a PDF.')
+		print(f'The filename {pdfName} is not a PDF.')
 		sys.exit()
 
 	pdfFile = open(pdfName, 'rb')
@@ -39,7 +39,7 @@ def encrypt():
 	encryptedPdf = open('encrypted' + path.basename(pdfName), 'wb')
 	pdfWriter.write(encryptedPdf)
 	encryptedPdf.close()
-	print('File encrypted and saved as encrypted' + path.basename(pdfName))
+	print(f'File encrypted and saved as encrypted {path.basename(pdfName)}')
 
 # Decrypt
 def decrypt():
@@ -48,7 +48,7 @@ def decrypt():
 
 	# Check if entered filename is valid
 	if not path.exists(pdfName) or pdfName[-4:].lower() != '.pdf':
-		print('The filename ' + pdfName + ' is not a PDF.')
+		print(f'The filename {pdfName} is not a PDF.')
 		sys.exit()
 
 	pdfFile = open(pdfName, 'rb')
@@ -67,7 +67,7 @@ def decrypt():
 	decryptedPdf = open('decrypted' + path.basename(pdfName), 'wb')
 	pdfWriter.write(decryptedPdf)
 	decryptedPdf.close()
-	print('File decrypted and saved as decrypted' + path.basename(pdfName))
+	print(f'File decrypted and saved as decrypted{path.basename(pdfName)}')
 
 print('Enter the task to perform (1 or 2)\n1. Encrypt a PDF\n2. Decrypt a PDF')
 response = int(input())

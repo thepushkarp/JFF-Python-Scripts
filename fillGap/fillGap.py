@@ -17,9 +17,10 @@ from math import log
 import shutil
 
 # Input file/folder name and extension
-filename = input("Enter the name prefix for the files/folders\n")
-print("\nEnter the extension after the dot in filenames (like txt in spam01.txt)")
-print("Type \"folder\" (without the quotes) if the files are folders")
+filename = input('Enter the name prefix for the files/folders\n')
+print('\nEnter the extension after the dot in filenames \
+	(like txt in spam01.txt)')
+print('Type \'folder\' (without the quotes) if the files are folders')
 ext = input()
 
 # Create filename regex
@@ -34,11 +35,11 @@ else:
 	)
 
 # Put matching file/folder names in a list
-path = input("\nEnter the path of folder containing the file/folder\n")
+path = input('\nEnter the path of folder containing the file/folder\n')
 path = os.path.abspath(path)
 print(path)
 if not os.path.isdir(path):
-	print("The path entered is not a valid folder.")
+	print('The path entered is not a valid folder.')
 	sys.exit()
 else:
 	lst = []
@@ -50,6 +51,8 @@ else:
 # Sort list and take size of list as padding
 lst = sorted(lst)
 padding = int(log(len(lst))//log(10)) + 1
+
+print('Renamaming files/folders...')
 
 # Rename files/folders
 for i in range(len(lst)):
@@ -63,4 +66,4 @@ for i in range(len(lst)):
 		oldPath = os.path.join(path, lst[i])
 		newPath = os.path.join(path, newName)
 		shutil.move(oldPath, newPath)
-print("The files are renamed with gaps closed.")
+print('The files are renamed with gaps closed.')

@@ -118,35 +118,35 @@ for groups in emailRegex.findall(text):
 # Save results in .txt files
 phoneNumbers = open('phoneNumbers.txt', 'w')
 
-phoneNumbers.write("Mobile Phone Numbers:\n")
+phoneNumbers.write('Mobile Phone Numbers:\n')
 if mobileMatches == []:
-	phoneNumbers.write("No Mobile Phone Numbers Found")
+	phoneNumbers.write('No Mobile Phone Numbers Found')
 else:
 	phoneNumbers.write('\n'.join(mobileMatches))
-phoneNumbers.write("\n\n")
+phoneNumbers.write('\n\n')
 
-phoneNumbers.write("Toll-Free/LocalRate Phone Numbers:\n")
+phoneNumbers.write('Toll-Free/LocalRate Phone Numbers:\n')
 if tollFreeMatches == []:
-	phoneNumbers.write("No Toll-Free/Local-Rate Phone Numbers Found")
+	phoneNumbers.write('No Toll-Free/Local-Rate Phone Numbers Found')
 else:
 	phoneNumbers.write('\n'.join(tollFreeMatches))
-phoneNumbers.write("\n\n")
+phoneNumbers.write('\n\n')
 
-phoneNumbers.write("Telephone Numbers:\n")
+phoneNumbers.write('Telephone Numbers:\n')
 if telMatches == []:
-	phoneNumbers.write("No Telephone Numbers Found")
+	phoneNumbers.write('No Telephone Numbers Found')
 else:
 	phoneNumbers.write('\n'.join(telMatches))
-phoneNumbers.write("\n")
+phoneNumbers.write('\n')
 
 emails = open('emails.txt', 'w')
-emails.write("Emails:\n")
+emails.write('Emails:\n')
 if emailMatches == []:
-	emails.write("No Emails Found")
+	emails.write('No Emails Found')
 else:
 	emails.write('\n'.join(emailMatches))
-emails.write("\n")
+emails.write('\n')
 
 phoneNumbers.close()
 emails.close()
-print("Phone Numbers and Emails saved to phoneNumbers.txt and emails.txt")
+print('Phone Numbers and Emails saved to phoneNumbers.txt and emails.txt')

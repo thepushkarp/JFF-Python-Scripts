@@ -17,11 +17,11 @@ logoName = os.path.abspath(logoName)
 
 # If logo file does not ecists or is not a supported image file
 if not os.path.exists(logoName):
-	print('The filename ' + logoName + ' does not exists.')
+	print(f'The filename {logoName}  does not exists.')
 	sys.exit()
 elif not (logoName.lower().endswith('.png') or \
 	logoName.lower().endswith('.jpg') or logoName.lower().endswith('.jpeg')):
-	print('The filename ' + logoName + ' is not a supported image file.')
+	print(f'The filename {logoName} is not a supported image file.')
 	sys.exit()
 
 logoIm = Image.open(logoName).convert("RGBA")
@@ -62,10 +62,10 @@ for fileName in os.listdir('.'):
 	logoIm = logoIm.resize((logoWidth, logoHeight), Image.ANTIALIAS)
 
 	# Add logo
-	print(f'Adding logo to {fileName}...')
+	print(f'\nAdding logo to {fileName}...')
 	im.paste(logoIm, (width - logoWidth - pad, height - logoHeight - pad), \
 		logoIm)
 
 	# Save the image with added logo
 	im.save(os.path.join('withLogo', fileName), quality = 100)
-	print(f'Saved {fileName} with added logo.')
+	print(f'Saved {fileName} with added logo')

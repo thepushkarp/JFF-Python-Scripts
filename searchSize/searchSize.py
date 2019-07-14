@@ -38,28 +38,29 @@ def getSize(folPath):
 	return totalSize
 
 # Input minimum size
-size = int(input("Enter the minimum size (in bytes)\n"))
+size = int(input('Enter the minimum size (in bytes)\n'))
 
 # Input folder name
-folder = input("Enter the path of the folder to search\n")
+folder = input('Enter the path of the folder to search\n')
 folder = os.path.abspath(folder) # Absolute path
 
 # Verify if folder name and path exists
 if not os.path.exists(folder):
-	print("The folder path entered does not exists.")
+	print('The folder path entered does not exists.')
 	sys.exit()
 else:
 	folderSize = getSize(folder)
 
 	# If no files/folders found
 	if large == {}:
-		print(f"There are no files or folders with size greater than {size} bytes.")
+		print(f'There are no files or folders with size greater than {size} \
+			bytes.')
 
 	#  Print paths with size
 	else:
-		print(f"The files and folders with size greater than {size} are:")
+		print(f'The files and folders with size greater than {size} are:')
 		for path in large.keys():
 			if os.path.isfile(path):
-				print(f"The size of the file {path} is: {large[path]} bytes.")
+				print(f'The size of the file {path} is: {large[path]} bytes.')
 			elif os.path.isdir(path):
-				print(f"The size of the folder {path} is: {large[path]} bytes.")
+				print(f'The size of the folder {path} is: {large[path]} bytes.')

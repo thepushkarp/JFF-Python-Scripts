@@ -17,11 +17,11 @@ watermarkName = path.abspath(watermarkName)
 
 # Check if entered filenames are valid
 if not path.exists(baseFileName) or baseFileName[-4:].lower() != '.pdf':
-	print('The filename ' + baseFileName + ' is not a PDF.')
+	print(f'The filename {baseFileName} is not a PDF.')
 	sys.exit()
 
 elif not path.exists(watermarkName) or watermarkName[-4:].lower() != '.pdf':
-	print('The filename ' + watermarkName + ' is not a PDF.')
+	print(f'The filename {watermarkName} is not a PDF.')
 	sys.exit()
 
 else:
@@ -44,4 +44,4 @@ else:
 	baseFile.close()
 	markedPdfFile.close()
 
-	print('Watermarked file saved as watermarked' + path.basename(baseFileName))
+	print(f'Watermarked file saved as watermarked{path.basename(baseFileName)}')

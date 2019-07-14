@@ -28,8 +28,8 @@ for filename in pdfFiles:
 	# Loop through the pages and add them
 	start = 0
 	if pdfReader.numPages > 1:
-		ans = input('Do you want to include the cover page of ' + filename\
-		+ ' ? (y/n): ')
+		ans = input(f'Do you want to include the cover page of {filename}? \
+			(y/n): ')
 		start = 0 if ans.lower() == 'y' else 1
 	for pageNum in range(start, pdfReader.numPages):
 		pageObj = pdfReader.getPage(pageNum)
@@ -41,4 +41,4 @@ pdfOutput = open(os.path.join('combinedPDFs', 'combined' + pdfFiles[0]), 'wb')
 pdfWriter.write(pdfOutput)
 pdfOutput.close()
 
-print('Combined PDF saved as ' + 'combined' + pdfFiles[0])
+print(f'Combined PDF saved as combined{pdfFiles[0]}')
