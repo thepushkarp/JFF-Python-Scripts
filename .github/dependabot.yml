@@ -1,0 +1,16 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "08:30"
+    timezone: Asia/Kolkata
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: pypdf3
+    versions:
+    - 1.0.2
+  - dependency-name: pyperclip
+    versions:
+    - 1.8.1
